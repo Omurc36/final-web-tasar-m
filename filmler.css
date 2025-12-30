@@ -1,0 +1,272 @@
+/* ===== BASE ===== */
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  background-color: black;
+  height: 60px;
+  color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px;
+}
+
+.logo{
+  font-size: 30px;
+  color: brown;
+}
+
+.menu-list{
+  display: flex;
+  list-style: none;
+  column-gap: 30px;
+}
+
+.menu-list-item a{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.menu-list-item:hover,
+.menu-list-item.active{
+  font-weight: bold;
+}
+
+/* ===== PROFILE ===== */
+.profile-container{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.profile-picture{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text-counteiner{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  background-color: black;
+  color: aliceblue;
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.sidebar i{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  margin-left: 50px;
+  color: aliceblue;
+}
+
+/* ===== PAGE TITLE ===== */
+.content-wrapper{
+  padding: 40px 80px;
+}
+
+/* ===== MOVIE LIST ===== */
+.movie-list-counteiner{
+  margin-left: 70px;
+  color: aliceblue;
+}
+
+.movie-list-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.movie-item{
+  position: relative;
+}
+
+/* Hover title & buttons */
+.movie-item:hover .movie-item-title,
+.movie-item:hover .movie-item-buttons{
+  opacity: 1;
+}
+
+.movie-item-img{
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  transition: 1s all ease-in-out;
+}
+
+.movie-item:hover .movie-item-img{
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-item-title{
+  background-color: rgba(40,40,40,0.4);
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 10px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.movie-item-buttons{
+  background-color: rgba(40,40,40,0.4);
+  padding: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 20px;
+  display: flex;
+  column-gap: 20px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.movie-item-buttons i{
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.movie-item-buttons i:hover{
+  opacity: 1;
+}
+/* ===== VERTICAL MOVIE LIST ===== */
+.movie-vertical-list{
+  margin-left: 70px;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.movie-row{
+  display: flex;
+  gap: 30px;
+  background-color: rgba(20,20,20,0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.movie-row img{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-info{
+  flex: 1;
+}
+
+.movie-info h2{
+  margin-bottom: 10px;
+  color: white;
+}
+
+.imdb{
+  color: goldenrod;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description{
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  max-width: 600px;
+}
+
+.movie-info iframe{
+  width: 420px;
+  height: 240px;
+  border-radius: 8px;
+  border: none;
+}
+/* NAVBAR LINK RENKLERİ */
+.menu-list-item a{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.menu-list-item a:visited{
+  color: aliceblue;
+}
+
+.menu-list-item a:hover{
+  color: brown;
+}
+.login-panel{
+  position: absolute;
+  top: 65px;
+  right: 50px;
+  width: 220px;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+  z-index: 20;
+}
+.login-panel{
+  position: absolute;
+  top: 65px;
+  right: 50px;
+  width: 220px;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+  z-index: 20;
+}
+.movie-info iframe {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+
+

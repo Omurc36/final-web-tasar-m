@@ -1,0 +1,314 @@
+/* ! base css start */
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* ! base css end */
+
+
+/* ! navbar css start */
+.navbar{
+  background-color: black;
+  height: 60px;
+  color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px;
+}
+
+.logo {
+  font-size: 30px;
+  color: brown;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  column-gap: 30px;
+  padding: 0;
+}
+
+.menu-list-item {
+  cursor: pointer;
+}
+
+.menu-list-item:hover,
+.menu-list-item.active {
+  font-weight: bold;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.profile-text-counteiner{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.toggle{
+  width: 40px;
+  height: 20px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.toggle-icon{
+  color: goldenrod;
+}
+
+.toggle-ball{
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 1px;
+}
+/* ! navbar css end */
+
+
+/* ! sidebar css start */
+.sidebar{
+  background-color: black;
+  color: aliceblue;
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.sidebar i{
+  font-size: 20px;
+  cursor: pointer;
+}
+/* ! sidebar css end */
+
+
+/* ! featured css start */
+.container{
+  margin-left: 50px;
+  background-color: black;
+  color: aliceblue;
+
+}
+
+.content-wrapper{
+  height: calc(100vh - 60px);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.25)),
+    url("resim/scarface.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-title{
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.featured-desc{
+  max-width: 500px;
+  margin-bottom: 25px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.featured-buttons{
+  display: flex;
+  gap: 15px;
+}
+
+.featured-buttons button{
+  padding: 10px 22px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.featured-buttons button:first-child{
+  background-color: white;
+  color: black;
+}
+
+.featured-buttons button:last-child{
+  background-color: rgba(109,109,110,0.7);
+  color: white;
+}
+/* ! featured css end */
+
+/* !movie list css start*/
+.movie-list-counteiner{
+  margin-left: 70px;
+  color: aliceblue;
+}
+.movie-list{
+ list-style: none; 
+ padding: 0;
+ height: 300pxs;
+ display: flex;
+ align-items: center;
+ column-gap: 50px;
+}
+
+.movie-list-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-item{
+  position: relative;
+}
+.movie-item :hover .movie-item-title ,
+.movie-item :hover .movie-item-buttons{
+opacity: 1;
+}
+
+
+.movie-item-img{
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+    transition: 1s all ease-in-out;
+}
+ 
+.movie-item :hover .movie-item-img {
+transform: scale(1.2);
+margin: 0 30px;
+opacity: .5;
+}
+
+.movie-item-title{
+  background-color: rgba(40, 40, 40, 0.4);
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 13px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-item-buttons{
+  background-color: rgba(40, 40, 40, 0.4);
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+bottom: 10%;
+  left: 20px;
+  display: flex;
+  column-gap: 20px;
+  opacity: 0;
+    transition: 1s all ease-in-out;
+
+}
+
+.movie-item-buttons i{
+  cursor: pointer;
+  opacity: .5;
+  font-size: 20px;
+    transition: 0.5s all ease ;
+}
+
+.movie-item-buttons i :hover{
+ opacity: .1;
+}
+.arrow{
+  width: 100px;
+  display: flex;
+  font-size: 120px;
+position: absolute;
+right: 0;
+top:100px;
+opacity: .5;
+transition: .5s ease all;
+cursor: pointer;
+color: aliceblue;
+}
+
+.arrow :hover{
+  opacity: 1;
+
+}
+
+
+/* !movie list css end*/
+.login-panel{
+  position: absolute;
+  top: 65px;
+  right: 50px;
+  width: 220px;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+  z-index: 20;
+}
+/* NAVBAR LINK RENKLERİ */
+.menu-list-item a{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.menu-list-item a:visited{
+  color: aliceblue;
+}
+
+.menu-list-item a:hover{
+  color: brown;
+}
+.login-panel{
+  position: absolute;
+  top: 65px;
+  right: 50px;
+  width: 220px;
+  background-color:brown;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+  z-index: 20;
+}
